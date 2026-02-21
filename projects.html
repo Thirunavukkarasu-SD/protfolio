@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Thirunavukkarasu Portfolio</title>
+    <meta name="description" content="Project case studies by Thirunavukkarasu: Smart Classroom Monitoring System and RAG-based AI Assistant." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" class="brand">Thirunavukkarasu</a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" aria-current="page">Projects</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-main">
+      <section class="section page-hero reveal">
+        <p class="eyebrow">Case Studies</p>
+        <h1>Selected Projects</h1>
+        <p class="intro">Real-world AI system design with privacy-first and offline-capable deployment thinking.</p>
+      </section>
+
+      <section class="section reveal" id="smart-classroom-monitoring-system">
+        <article class="project-case">
+          <header>
+            <p class="project-type">Flagship Project · Academic</p>
+            <h2>Smart Classroom Monitoring System</h2>
+            <p class="project-purpose">Analyze student attendance, attention, and classroom activity through computer vision.</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Problem statement</h3>
+              <p>Manual classroom monitoring is inconsistent and hard to scale across sessions. Faculty need measurable student engagement indicators without increased administrative overhead.</p>
+            </div>
+            <div>
+              <h3>Solution overview</h3>
+              <p>A local ML pipeline processes classroom video, tracks attendance signals, estimates attention patterns, and provides summarized insight in a Streamlit dashboard.</p>
+            </div>
+          </div>
+          <h3>Architecture</h3>
+          <ul>
+            <li>Video input and frame processing with OpenCV.</li>
+            <li>Object and person understanding using YOLOv8.</li>
+            <li>Behavior and sequence analysis using CNN + LSTM.</li>
+            <li>Dashboard and reporting interface in Streamlit.</li>
+          </ul>
+          <div class="case-grid">
+            <div>
+              <h3>Tech stack</h3>
+              <ul class="tag-list"><li>Python</li><li>YOLOv8</li><li>OpenCV</li><li>CNN + LSTM</li><li>Streamlit</li></ul>
+            </div>
+            <div>
+              <h3>Privacy and deployment</h3>
+              <p>Implemented as a local workflow to keep classroom data in controlled environments.</p>
+              <h3>Results and learnings</h3>
+              <p>Working local demo completed with practical end-to-end computer vision integration.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section reveal" id="rag-based-ai-assistant">
+        <article class="project-case">
+          <header>
+            <p class="project-type">Secondary Project · Personal</p>
+            <h2>RAG-based AI Assistant</h2>
+            <p class="project-purpose">Answer questions from private documents with no internet dependency.</p>
+          </header>
+          <div class="case-grid">
+            <div>
+              <h3>Problem statement</h3>
+              <p>Cloud assistants can conflict with privacy and compliance needs when sensitive documents are involved.</p>
+            </div>
+            <div>
+              <h3>Solution overview</h3>
+              <p>A fully offline RAG assistant indexes documents locally and returns grounded responses through local inference.</p>
+            </div>
+          </div>
+          <h3>Architecture</h3>
+          <ul>
+            <li>Document ingestion and chunking pipeline in Python.</li>
+            <li>Local embedding and retrieval with vector database support.</li>
+            <li>RAG orchestration using LangChain.</li>
+            <li>On-device inference with LM Studio and AnythingLLM integration.</li>
+          </ul>
+          <div class="case-grid">
+            <div>
+              <h3>Tech stack</h3>
+              <ul class="tag-list"><li>Python</li><li>LangChain</li><li>Vector DB</li><li>LM Studio</li><li>AnythingLLM</li></ul>
+            </div>
+            <div>
+              <h3>Privacy and deployment</h3>
+              <p>Designed for local-only execution so private knowledge remains offline.</p>
+              <h3>Results and learnings</h3>
+              <p>Implemented as a local personal assistant workflow with privacy-first constraints.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer"><p>Privacy-first systems, built for practical deployment.</p></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
